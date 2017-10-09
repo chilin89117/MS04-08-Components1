@@ -1,26 +1,45 @@
 <template>
   <div class="component">
-    <h3>You may view the User Details here</h3>
+    <h3>"UserDetail" (child 1)</h3>
     <p>Many Details</p>
-    <p>User Name: {{switchName()}}</p>
+    <p>User Name: {{reverseName()}}</p>
+    <p>User Age: {{myage}}</p>
+    <br>
+    <!-- Reset name with custom event -->
+    <button type="button" @click="resetName">Reset (Custom Event)</button>
+    <!-- Reset name with callback function -->
+    <button type="button" @click="resetFn()">Reset (Callback Function)</button>
   </div>
 </template>
 
 <script>
-  export default {
-    props: {
-      user_name: {                     // Validation of data passed
-        type: String,
-        required: true,
-        // default: 'Default string',
-      },
+import {eventBus} from '../main.js';
+
+export default {
+  props: {
+    myname: {               // Validation of data passed from 'User.vue'
+      type: String,
+      required: true,
+      // default: 'Default string',
     },
-    methods: {
-      switchName() {
-        return this.user_name.split("").reverse().join("");
-      },
+    myage: Number,
+    resetFn: Function,      // Callback function from parent to reset name
+  },
+  methods: {
+    reverseName() {
+      return this.myname.split("").reverse().join("");
     },
-  };
+    resetName() {
+      this.myname = 'Abbie';
+      this.$emit('nameWasReset', this.myname);    // Trigger event to notify parent 'User.vue'
+    },
+  },
+  created() {
+    eventBus.$on('ageWasEditedB', (age) => {      // Listen for event on event bus
+      this.myage = age;
+    });
+  },
+};
 </script>
 
 <style scoped>
