@@ -1,4 +1,4 @@
-# 04-components (Not with Laravel)
+# 04-components (No Laravel)
 
 > MS04-04 Components Communication
 
