@@ -29,9 +29,11 @@
 * Parent of 2 child components
 	* `Servers.vue`
 	* `Server.vue`
-* `Servers.vue`
-	* shows a list of servers and statuses
-	* each server has a button that uses the eventbus in `main.js` to pass a single server to `Server.vue`
-* `Server.vue`
-	* shows id and status of one server from an eventbus event
-	* has a button that changes the status to 'Normal`
+
+### `Servers.vue`
+* Shows a list of servers and statuses
+* Each server has a button that uses the eventbus in `main.js` to pass a single server to `Server.vue`
+
+### `Server.vue`
+* Shows id and status of one server from an eventbus event
+* Has a button that changes the status to 'Normal`
