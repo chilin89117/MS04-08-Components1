@@ -1,7 +1,6 @@
 <template>
   <div class="component">
     <h3>"UserEdit" (child 2)</h3>
-    <p>Edit me!</p>
     <p>User Name: {{myname}}</p>
     <p>User Age: {{myage}}</p>
     <button @click="editAgeCustom">Edit Age (Custom Event)</button>

@@ -1,7 +1,6 @@
 <template>
   <div class="component">
     <h3>"UserDetail" (child 1)</h3>
-    <p>Many Details</p>
     <p>User Name: {{reverseName()}}</p>
     <p>User Age: {{myage}}</p>
     <br>

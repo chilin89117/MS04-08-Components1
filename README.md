@@ -1,20 +1,26 @@
-# 04-components (No Laravel)
+# MS04-04 Components Communication (No Laravel)
+## `App.vue`
+* Calls component `User.vue`
 
-> MS04-04 Components Communication
+### `User.vue`
+* Parent of 2 child components
+	* `UserDetail.vue`
+	* `UserEdit.vue` 
+* Has 2 buttons to change and reset its `name` property
 
-## Build Setup
+### `UserDetail.vue`
+* Has 2 buttons to reset the `name` property in the parent using
+	* custom event, i.e. `this.$emit('nameWasReset', this.myname);`
+	* callback function `resetFn()` passed down from the parent
+* Also listens for an event on the eventbus to change `age`
 
-``` bash
-# install dependencies
-npm install
+### `UserEdit.vue`
+* Has 2 buttons to change the `age` property
+	* custom event changes the property in the parent which then affects the sibling component
+	* use eventbus in `main.js` to change `age` in the sibling without going through the parent
 
-# serve with hot reload at localhost:8080
-npm run dev
+### `main.js`
+* Creates a new instance, an eventbus, with a method that emits an event to change `age` 
 
-# build for production with minification
-npm run build
-```
+#### End of Section 8, lecture 116.
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-This section shows communication among components with 1 parent and 2 child components using custom events, functions, and event bus.

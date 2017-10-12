@@ -1,7 +1,6 @@
 <template>
   <div class="component">
     <h1>"User" Component (parent)</h1>
-    <p>I'm an awesome User!</p>
     <button @click="changeName">Change My Name</button>
     <button @click="age=27">Reset My Age</button>
     <br><br>
