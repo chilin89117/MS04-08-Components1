@@ -1,4 +1,10 @@
-# MS04-04 Components Communication (No Laravel)
+# MS04-08-Components1
+## Communication Between Components
+
+![App.vue](../assets/a.png?raw=true)
+![Exercise7.vue](../assets/b.png?raw=true)
+
+
 **Note: edit `main.js` to switch between `App.vue` and `Exercise7.vue`**
 ## `App.vue`
 * Calls component `User.vue`
