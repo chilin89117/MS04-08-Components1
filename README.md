@@ -27,7 +27,8 @@
 	* use eventbus in `main.js` to change `age` in the sibling without going through the parent
 
 ### `main.js`
-* Creates a new instance, an eventbus, with a method that emits an event to change `age`
+* Creates a new instance
+* Creates an eventbus with a method that can be called to change `age` by emitting an event
 
 #### End of Section 8, lecture 116.
 
