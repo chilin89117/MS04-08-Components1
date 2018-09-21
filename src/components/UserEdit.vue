@@ -1,8 +1,8 @@
 <template>
   <div class="component">
-    <h3>"UserEdit" (child 2)</h3>
-    <p>User Name: {{myname}}</p>
-    <p>User Age: {{myage}}</p>
+    <h2>"UserEdit" (child 2)</h2>
+    <h4>User Name: {{myname}}</h4>
+    <h4>User Age: {{myage}}</h4>
     <button @click="editAgeCustom">Edit Age (Custom Event)</button>
     <button @click="editAgeBus">Edit Age (Event Bus)</button>
   </div>

@@ -1,13 +1,13 @@
 <template>
   <div class="component">
-    <h3>"UserDetail" (child 1)</h3>
-    <p>User Name: {{reverseName()}}</p>
-    <p>User Age: {{myage}}</p>
+    <h2>"UserDetail" (child 1)</h2>
+    <h4>User Name: {{reverseName()}}</h4>
+    <h4>User Age: {{myage}}</h4>
     <br>
     <!-- Reset name with custom event -->
-    <button type="button" @click="resetName">Reset (Custom Event)</button>
+    <button type="button" @click="resetName">Reset Name (Custom Event)</button>
     <!-- Reset name with callback function -->
-    <button type="button" @click="resetFn()">Reset (Callback Function)</button>
+    <button type="button" @click="resetFn()">Reset Name (Callback Function)</button>
   </div>
 </template>
 
@@ -34,9 +34,7 @@ export default {
     },
   },
   created() {
-    eventBus.$on('ageWasEditedB', (age) => {      // Listen for event on event bus
-      this.myage = age;
-    });
+    eventBus.$on('ageWasEditedB', age => this.myage = age);  // Listen for event on event bus
   },
 };
 </script>

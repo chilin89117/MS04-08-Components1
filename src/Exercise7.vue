@@ -26,8 +26,8 @@
 </template>
 
 <script>
-  import Server from './Server.vue'
-  import Servers from './Servers.vue'
+  import Server from './components7/Server.vue'
+  import Servers from './components7/Servers.vue'
 
   export default {
     components: {

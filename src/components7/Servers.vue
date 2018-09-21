@@ -2,7 +2,7 @@
   <!-- Show a list of servers defined in data() -->
   <div>
     <ul class="list-group">
-      <li class="list-group-item" v-for="(server, index) in servers">
+      <li class="list-group-item" v-for="(server, index) in servers" :key="server">
         Server No. {{server.id}}: {{server.status}}
         <button @click="checkServer(index)">Check Server</button>
       </li>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import {eventBus} from './main.js'
+import {eventBus} from '../main.js'
 export default {
   data() {
     return {

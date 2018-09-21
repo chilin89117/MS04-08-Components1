@@ -1,11 +1,11 @@
 <template>
   <div class="component">
     <h1>"User" Component (parent)</h1>
-    <button @click="changeName">Change My Name</button>
-    <button @click="age=27">Reset My Age</button>
-    <br><br>
-    <p>Current name is: {{name}}</p>
-    <p>Current age is: {{age}}</p>
+    <button @click="changeName">Change Name</button>
+    <button @click="age=27">Reset Age</button>
+    <br>
+    <h3>Current name is: {{name}}</h3>
+    <h3>Current age is: {{age}}</h3>
     <hr
     >
     <div class="row">
